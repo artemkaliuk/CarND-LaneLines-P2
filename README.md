@@ -133,3 +133,6 @@ The biggest issue so far was related bad fitting due to a strong influence of ou
 
 The proposed algorithm might be still vulnerable to outliers. To tackle this, robust fit approaches can be tried (e.g. RANSAC). Outlier analysis can generally be a good approach here. Tracking some further parameters (curvature, lane width, slope) as well mirroring a stable line onto the opposite site in case if the other line was not detected/was implausible could add more to the robustness of this approach. Nevertheless, applying machine and deep learning to the problem of lane detection gains more and more attention due to the scalability of the ML approaches. Selected papers on lane detection with ML can be found here: https://paperswithcode.com/task/lane-detection/codeless.
 
+Some further common challenges in lane detection:
+1) correct interpretation of lane markings if there are several of them (e.g. construction zone)
+2) Lane detection and calculating the curve radius on slopy roads
