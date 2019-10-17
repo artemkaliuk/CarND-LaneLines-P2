@@ -1,6 +1,4 @@
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+## README
 
 ---
 
@@ -136,5 +134,3 @@ Here's a [link to my video result](./output_video/project_video.mp4)
 The biggest issue so far was related bad fitting due to a strong influence of outliers, especially on the damaged road as gradient thresholding was used along with color thresholding. Later, I decided to find a way to ensure "cleaner" images after thresholding - for this purpose I used the b channel of the LAB color scheme for a better detection of yellow lines and the l channel of the HLS scheme for detection of white lines. Even though, white lines are still detected in a reduced range. Here it might make more sense to threshold the far and near range separately for each other and with different threshold values.
 
 The proposed algorithm might be still vulnerable to outliers. To tackle this, robust fit approaches can be tried (e.g. RANSAC). Outlier analysis can generally be a good approach here. Tracking some further parameters (curvature, lane width, slope) as well mirroring a stable line onto the opposite site in case if the other line was not detected/was implausible could add more to the robustness of this approach. Nevertheless, applying machine and deep learning to the problem of lane detection gains more and more attention due to the scalability of the ML approaches. Selected papers on lane detection with ML can be found here: https://paperswithcode.com/task/lane-detection/codeless.
-
-Nevertheless
