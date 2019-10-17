@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./camera_cal/calibration1.jpg "Distorted image"
-[image2]: ./output_images/calibration1.jpg "Undistorted image"
+[image2]: ./output_images/calibration7.jpg "Undistorted image"
 [image3]: ./test_images/test7.jpg "Distorted image"
 [image4]: ./output_images/test_2undist.jpg "Undistorted image"
 
@@ -95,8 +95,6 @@ The result of the perspective transformation on the binary image can be seen her
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Finding the outstanding pixels has never been easier thanks to the binary character of the image! Here, the most likely location of a lane marking is found by computing a histogram over the y-dimension of the image. The x region with the maximum gradient value represents the potential lane marking candidate. This procedure is done for both left and right halves of the image - this way, left and right lane markings can be located. Pixel extraction is then done by a sliding-window approach - the "good" pixels are searched for within windows located along the y-axis; after that, the next window is relocated according to the mean x-position of the pixels detected within the previos window. This procedure is implemented within the `find_lane_pixels()` function. After the initial detection was successful, it makes sense to start looking for the line candidate in the next frame within the area of the previosly detected line. This is implemented in the `search_around_poly()` function.
-
-![alt text][image9]
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
