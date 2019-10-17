@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 [image6]: ./output_images/test2.jpg "Binary image"
 
 [image7]: ./test_images/test8.jpg "Original image"
-[image8]: ./output_images/warped6.jpg "Binary warped image"
+[image8]: ./output_images/test_warped6.jpg "Binary warped image"
 
 [image9]: ./output_images/test_all4.jpg "Warped image, sliding window search, estimated polynoms and lane projection onto the original image"
 [video1]: ./project_video.mp4 "Video"
